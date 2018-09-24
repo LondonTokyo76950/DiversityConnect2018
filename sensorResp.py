@@ -17,6 +17,7 @@ while True:
             print("Alert!")
         elif tripCounter >= 15:
             print("Error!")
+            break
         print("Taking Photo")
         subprocess.call("./takePhoto.sh", shell=True)
         tripCounter += 1
