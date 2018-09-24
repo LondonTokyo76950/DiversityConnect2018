@@ -21,7 +21,6 @@ while True:
         print("Taking Photo")
         subprocess.call("./takePhoto.sh", shell=True)
         tripCounter += 1
-        time.sleep(1)
     else:
         tripCounter = 0
         print("Pin 8 is LOW")
