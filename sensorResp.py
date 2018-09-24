@@ -13,9 +13,9 @@ while True:
     time.sleep(0.015)
     if GPIO.input(8):
         print("Pin 8 is HIGH")
-        if tripCounter == 0 or tripCounter == 5 or tripCounter == 10:
+        if tripCounter % 5 == 0 :
             print("Alert!")
-        elif tripCounter >= 15:
+        if tripCounter >= 15:
             print("Error!")
             break
         print("Taking Photo")
