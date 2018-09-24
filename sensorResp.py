@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
 import time
+import subprocess
 
 GPIO.setmode(GPIO.BOARD)
 
@@ -16,6 +17,8 @@ while True:
             print("Alert!")
         elif tripCounter >= 15:
             print("Error!")
+        print("Taking Photo")
+        subprocess.call("takePhoto.sh", shell=True)
         tripCounter += 1
         time.sleep(1)
     else:
