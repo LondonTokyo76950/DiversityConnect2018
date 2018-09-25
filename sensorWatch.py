@@ -5,7 +5,7 @@ import subprocess
 
 GPIO.setmode(GPIO.BOARD)
 
-GPIO.setup(8, GPIO.IN)
+GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 tripCounter = 0
 
