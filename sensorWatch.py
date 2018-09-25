@@ -11,7 +11,7 @@ tripCounter = 0
 
 while True:
     time.sleep(0.015)
-    if GPIO.input(8):
+    if not GPIO.input(8):
         print("Pin 8 is HIGH")
         if tripCounter % 5 == 0 :
             print("Alert!")
